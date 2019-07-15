@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 
 mongoose.connect('mongodb://localhost:27017/issues');
 
+
 const connection = mongoose.connection;
 
 
@@ -37,7 +38,7 @@ router.route('/issues/add').post((req, res) => {
 });
 
 // retrieving issue
-router.get('/issues',(req, res,next) => {
+router.route('/issues').get((req, res,next) => {
     Issue.find((err, issues) => {
         res.json(issues);
     });

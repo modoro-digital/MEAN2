@@ -34,7 +34,7 @@ export class IssueService {
       severity : severity,
       status : status
     }
-    return this.http.post(`${this.url}/issue/update/${id}`,issue);
+    return this.http.post(`${this.url}/issues/update/${id}`,issue);
   }
 
   deleteIssue(id) {
