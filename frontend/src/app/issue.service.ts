@@ -26,12 +26,13 @@ export class IssueService {
     return this.http.post(`${this.url}/issues/add`,issue);
   }
 
-  uppdateIssue(id,title,responsible,description,severity) {
+  uppdateIssue(id,title,responsible,description,severity,status) {
     const issue = {
       title : title,
       responsible : responsible,
       description : description,
-      severity : severity
+      severity : severity,
+      status : status
     }
     return this.http.post(`${this.url}/issue/update/${id}`,issue);
   }

@@ -27,22 +27,12 @@ connection.on('error',(err) => {
 // add issue
 
 router.route('/issues/add').post((req, res) => {
-    let issue = new Issue({
-        title : req.params.title,
-        responsible : req.params.responsible,
-        description : req.params.description,
-        severity : req.params.severity,
-        status : req.params.status,
-
-
-    });
-    issue.save((err,issue) => {
-        if(err) {
-            res.json({msg : 'Fail'});
-        }
-        else {
-            res.json({msg: 'Success'});
-        }
+    let issue = new Issue(req.body);
+    issue.save().then(issue => {
+        res.status(200).json({"add" : "success"});
+    })
+    .catch(err => {
+        res.status(400).send("Fail");
     })
 });
 
