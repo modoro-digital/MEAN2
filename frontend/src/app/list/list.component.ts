@@ -28,8 +28,14 @@ export class ListComponent implements OnInit {
     this.router.navigate([`/edit/${id}`]);
   }
   deleteIssue(id) {
-    this.issueService.deleteIssue(id).subscribe(() => {
-      this.fetchIssues();
-    });
+    if(confirm('Bạn có chắc chắn muốn xóa không')) {
+      this.issueService.deleteIssue(id).subscribe(() => {
+        this.fetchIssues();
+      });
+    }
+    
+    
   }
+
+  
 }
