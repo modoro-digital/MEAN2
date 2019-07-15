@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { MatToolbarModule, 
   MatFormFieldModule, 
@@ -47,7 +49,8 @@ import { IssueService } from './issue.service';
   MatDividerModule, 
   MatSnackBarModule,
   MatToolbarModule,
-  HttpClientModule
+  HttpClientModule,
+  ReactiveFormsModule
   ],
   providers: [IssueService],
   bootstrap: [AppComponent]
