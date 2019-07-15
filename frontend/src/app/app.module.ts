@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { FormsModule } from '@angular/forms';
 
 import { MatToolbarModule, 
   MatFormFieldModule, 
@@ -24,14 +24,16 @@ import { MatToolbarModule,
   MatTableModule, 
   MatDividerModule, 
   MatSnackBarModule } from '@angular/material';
-
+import { MatDialogModule } from '@angular/material/dialog';
 import { IssueService } from './issue.service';
+import { DialogMessageComponent } from './dialog-message/dialog-message.component';
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     EditComponent,
     CreateComponent,
+    DialogMessageComponent,
     
   ],
   imports: [
@@ -50,7 +52,9 @@ import { IssueService } from './issue.service';
   MatSnackBarModule,
   MatToolbarModule,
   HttpClientModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  FormsModule,
+  MatDialogModule
   ],
   providers: [IssueService],
   bootstrap: [AppComponent]

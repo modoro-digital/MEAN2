@@ -1,3 +1,39 @@
 table {
     width: 100%;
 }
+mat-card {
+    width: 80%;
+    margin: 0 auto;
+}
+table tr th{
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    padding: 12px;
+}
+table tr td {
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    padding: 20px;
+}
+table tr button i {
+    display: inline-block;
+    font-size: 40px;
+    padding: 10px;
+}
+table tr th:last-child {
+    width: 200px;
+}
+button i {
+    font-family: 'FontAwesome'!important;
+}
+.search-form {
+    float: right;
+}
+
+.search-form input {
+    padding: 9px;
+    margin-right: 5px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
